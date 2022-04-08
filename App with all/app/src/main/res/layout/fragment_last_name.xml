@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.android.navegacion.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NameFragment"
+        android:padding="@dimen/default_gap"
+        android:orientation="vertical">
+
+
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/last_name1"
+            android:text="@={viewModel.lastName}"
+
+            />
+
+        <Button
+            android:id="@+id/action_next_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_button"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+</layout>
